@@ -1,22 +1,29 @@
 import React from "react";
-import '../assets/scss/TastefulRecipes.scss'
+import "../assets/scss/TastefulRecipes.scss";
 
+import Fade from "react-reveal/Fade";
 
 const TastefulRecipes = () => {
-  return <section class="testeful-recipes between">
-  <div class="container">
-      <div class="global-headline">
-          <div class="animate-top">
-              <h2 class="sub-headline">
-                  <span class="first-letter">T</span>asteful
+  return (
+    <section className="testeful-recipes between">
+      <div className="container">
+        <div className="global-headline">
+          <Fade top>
+            <div className="animate-top">
+              <h2 className="sub-headline">
+                <span className="first-letter">T</span>asteful
               </h2>
-          </div>
-          <div class="animate-bottom">
-              <h1 class="headline">Recipes</h1>
-          </div>
+            </div>
+          </Fade>
+          <Fade bottom>
+            <div className="animate-bottom">
+              <h1 className="headline">Recipes</h1>
+            </div>
+          </Fade>
+        </div>
       </div>
-  </div>
-</section>
+    </section>
+  );
 };
 
 export default TastefulRecipes;
