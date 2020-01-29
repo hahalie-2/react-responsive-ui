@@ -35,6 +35,12 @@
   letter-spacing: 0.5rem;
   margin-right: -0.5rem;
   animation: scale 0.5s forwards;
+
+  &.headline-dark {
+    color: var(--main-font-color-dark);
+    letter-spacing: 0.7rem;
+    margin-right: -0.7rem;
+  }
 }
 
 .separator {
