@@ -1,27 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
+import FullWidthContent from '../components/FullWidthContent'
 import "../assets/scss/TastefulRecipes.scss";
 
-import Fade from "react-reveal/Fade";
+import { TextContext } from '../contexts/textContext'
 
 const TastefulRecipes = () => {
+
+  const { TastefulRecipesText } = useContext(TextContext)
+
   return (
     <section className="testeful-recipes between">
-      <div className="container">
-        <div className="global-headline">
-          <Fade top>
-            <div className="animate-top">
-              <h2 className="sub-headline">
-                <span className="first-letter">T</span>asteful
-              </h2>
-            </div>
-          </Fade>
-          <Fade bottom>
-            <div className="animate-bottom">
-              <h1 className="headline">Recipes</h1>
-            </div>
-          </Fade>
-        </div>
-      </div>
+      <FullWidthContent info={TastefulRecipesText}/>
     </section>
   );
 };

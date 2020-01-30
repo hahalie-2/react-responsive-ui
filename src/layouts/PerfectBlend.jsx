@@ -1,27 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
+import FullWidthContent from '../components/FullWidthContent'
 import "../assets/scss/PerfectBlend.scss";
 
-import Fade from "react-reveal/Fade";
+import { TextContext } from '../contexts/textContext'
 
 const PerfectBlend = () => {
+
+  const { PerfectBlendText } = useContext(TextContext)
+
   return (
     <section className="perfect-blend between">
-      <div className="container">
-        <div className="global-headline">
-          <Fade top>
-            <div className="animate-top">
-              <h2 className="sub-headline">
-                <span className="first-letter">T</span>he perfect
-              </h2>
-            </div>
-          </Fade>
-          <Fade bottom>
-            <div className="animate-bottom">
-              <h1 className="headline">Blend</h1>
-            </div>
-          </Fade>
-        </div>
-      </div>
+      <FullWidthContent info={PerfectBlendText}/>
     </section>
   );
 };

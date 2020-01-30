@@ -8,38 +8,18 @@ import Hero from './layouts/Hero'
 import PerfectBlend from './layouts/PerfectBlend'
 import TastefulRecipes from './layouts/TastefulRecipes'
 
+import TextContextProvider from './contexts/textContext'
+
 import './assets/scss/Responsive.scss'
 
 import './App.css';
 
 function App() {
 
-  const info = [
-    {
-      firstLetter: 'D',
-      subHeadline: 'iscover',
-      headline: 'Our Story',
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-      unde, accusamus cumque iusto vero sint, incidunt ducimus
-      asperiores nostrum suscipit dolor ab obcaecati voluptas
-      deleniti. Cupiditate numquam nemo possimus molestias.`,
-      ctaBtn: 'About us'
-    },
-    {
-      firstLetter: 'D',
-      subHeadline: 'iscover',
-      headline: 'Menu',
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-      unde, accusamus cumque iusto vero sint, incidunt ducimus
-      asperiores nostrum suscipit dolor ab obcaecati voluptas
-      deleniti. Cupiditate numquam nemo possimus molestias.`,
-      ctaBtn: 'View the full menu'
-    }
-  ]
-
 
   return (
-    <div className="App">
+    <TextContextProvider>
+      <div className="App">
       <Header />
       <Hero />
       <DiscoverOurStory />
@@ -49,6 +29,8 @@ function App() {
       <CulinaryDelight />
       <Footer />
     </div>
+    </TextContextProvider>
+    
   );
 }
 

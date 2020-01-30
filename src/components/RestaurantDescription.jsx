@@ -1,26 +1,24 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 
-const RestaurantDescription = () => {
+const RestaurantDescription = ({info}) => {
+
+  const { firstLetter, subHeadline, headline, description, ctaBtn } = info
+
   return (
-    <div className="restaurant-description padding-right animate-left">
+    <div className="restaurant-description padding-right">
       <div className="global-headline">
         <h2 className="sub-headline">
-          <span className="first-letter">D</span>iscover
+<span className="first-letter">{firstLetter}</span>{subHeadline}
         </h2>
-        <h1 className="headline headline-dark">Our Story</h1>
+  <h1 className="headline headline-dark">{ headline }</h1>
         <div className="asterisk">
           <FontAwesomeIcon icon={faAsterisk} />
         </div>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde,
-        accusamus cumque iusto vero sint, incidunt ducimus asperiores nostrum
-        suscipit dolor ab obcaecati voluptas deleniti. Cupiditate numquam nemo
-        possimus molestias.
-      </p>
-      <a href="#" className="btn body-btn">
-        About us
-      </a>
+      <p>{description}</p>
+      <a href="#" className="btn body-btn">{ctaBtn}</a>
     </div>
   );
 };
